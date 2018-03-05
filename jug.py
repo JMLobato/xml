@@ -15,11 +15,21 @@ print("Nº de juguetes:",len(nombres))
 #3º apartado
 fecha=input("Introduce la fecha en la que se añadió el juguete separado por -: ")
 fechas=raiz.xpath("product/date_add")
+fallo=False
 for elem in fechas:
 	Pfecha=elem.text.split(" ")[0]
 	if Pfecha == fecha:
 		print("Artículo:",nombres[fechas.index(elem)].text)
-	else:
-		print("No existe ningún artículo introducido en esa fecha")
+		fallo=True		
+if fallo != True:
+	print("No existe ningún artículo introducido en esa fecha")
 #4º apartado
-articulo=input("Introduce un articulo: ")
+articulo=input("Introduce un artículo: ")
+	st=raiz.xpath("product/stock")
+	fallo=False
+	for elem in nombres:
+		if articulo == elem:
+			print("Artículos en stock:",st[nombres.index(elem)].text)
+			fallo=True
+if fallo != True:
+	print("Ese artículo no existe")
