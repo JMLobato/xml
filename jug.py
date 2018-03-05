@@ -25,11 +25,11 @@ if fallo != True:
 	print("No existe ningún artículo introducido en esa fecha")
 #4º apartado
 articulo=input("Introduce un artículo: ")
-	st=raiz.xpath("product/stock")
-	fallo=False
-	for elem in nombres:
-		if articulo == elem:
-			print("Artículos en stock:",st[nombres.index(elem)].text)
-			fallo=True
+stock=raiz.xpath("product/stock")
+fallo=False
+for elem in nombres:
+	if articulo == elem:
+		print("Artículos en stock:",stock[nombres.index(elem)].text)
+		fallo=True
 if fallo != True:
 	print("Ese artículo no existe")
