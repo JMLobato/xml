@@ -9,3 +9,4 @@ for x,y,z in zip(nombres,precio,iva):
 	print("Articulo:",x.text)
 	print("Precio Total:",total)
 	print()
+print("Nº de juguetes:",len(nombres))
