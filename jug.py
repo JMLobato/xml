@@ -28,7 +28,7 @@ articulo=input("Introduce un artículo: ")
 stock=raiz.xpath("product/stock")
 fallo=False
 for elem in nombres:
-	if articulo == elem:
+	if (articulo).upper() == (elem.text).upper():
 		print("Artículos en stock:",stock[nombres.index(elem)].text)
 		fallo=True
 if fallo != True:
