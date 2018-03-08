@@ -13,7 +13,7 @@ for x,y,z in zip(nombres,precio,iva):
 #2º apartado	
 print("Nº de juguetes:",len(nombres))
 #3º apartado
-fecha=input("Introduce la fecha en la que se añadió el juguete separado por -: ")
+fecha=input("Introduce la fecha en la que se añadió el juguete separado por guiones y empezando por el año: ")
 fechas=raiz.xpath("product/date_add")
 fallo=False
 for elem in fechas:
